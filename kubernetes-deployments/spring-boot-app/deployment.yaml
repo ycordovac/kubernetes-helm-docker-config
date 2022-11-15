@@ -15,7 +15,7 @@ spec:
      spec:
          containers:
            - name: spring-boot-app-cont
-             image: "dberenguerdevcenter/spring-boot-app:latest"
+             image: "yandihlg/bootcamp:0.0.2-SNAPSHOT"
              imagePullPolicy: Always
   replicas: 1
   selector:
