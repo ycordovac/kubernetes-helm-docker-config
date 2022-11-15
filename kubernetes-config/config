@@ -4,29 +4,54 @@ clusters:
     certificate-authority: ca.crt
     extensions:
     - extension:
-        last-update: Thu, 01 Sep 2022 10:23:54 CEST
+        last-update: Thu, 10 Nov 2022 09:43:20 CET
         provider: minikube.sigs.k8s.io
-        version: v1.26.1
+        version: v1.28.0
       name: cluster_info
-    server: https://192.168.67.4:8443
-  name: minikube
-contexts:
-- context:
-    cluster: minikube
+    server: https://192.168.58.2:8443
+  name: ejercicios
+- cluster:
+    certificate-authority: ca.crt
     extensions:
     - extension:
-        last-update: Thu, 01 Sep 2022 10:23:54 CEST
+        last-update: Tue, 15 Nov 2022 08:30:04 CET
         provider: minikube.sigs.k8s.io
-        version: v1.26.1
+        version: v1.28.0
+      name: cluster_info
+    server: https://192.168.67.2:8443
+  name: javaProfile
+contexts:
+- context:
+    cluster: ejercicios
+    extensions:
+    - extension:
+        last-update: Thu, 10 Nov 2022 09:43:20 CET
+        provider: minikube.sigs.k8s.io
+        version: v1.28.0
       name: context_info
     namespace: default
-    user: minikube
-  name: minikube
-current-context: minikube
+    user: ejercicios
+  name: ejercicios
+- context:
+    cluster: javaProfile
+    extensions:
+    - extension:
+        last-update: Tue, 15 Nov 2022 08:30:04 CET
+        provider: minikube.sigs.k8s.io
+        version: v1.28.0
+      name: context_info
+    namespace: default
+    user: javaProfile
+  name: javaProfile
+current-context: javaProfile
 kind: Config
 preferences: {}
 users:
-- name: minikube
+- name: ejercicios
   user:
-    client-certificate: minikube/client.crt
-    client-key: minikube/client.key
+    client-certificate: /home/lifecycle/.minikube/profiles/ejercicios/client.crt
+    client-key: /home/lifecycle/.minikube/profiles/ejercicios/client.key
+- name: javaProfile
+  user:
+    client-certificate: .minikube/client.crt
+    client-key: .minikube/client.key
