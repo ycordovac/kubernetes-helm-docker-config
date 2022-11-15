@@ -53,5 +53,5 @@ users:
     client-key: /home/lifecycle/.minikube/profiles/ejercicios/client.key
 - name: javaProfile
   user:
-    client-certificate: .minikube/client.crt
-    client-key: .minikube/client.key
+    client-certificate: minikube/client.crt
+    client-key: minikube/client.key
