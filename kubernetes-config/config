@@ -1,57 +1,32 @@
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: ca.crt
+    certificate-authority: /home/teralco/.minikube/ca.crt
     extensions:
     - extension:
-        last-update: Thu, 10 Nov 2022 09:43:20 CET
+        last-update: Fri, 18 Nov 2022 08:16:08 CET
         provider: minikube.sigs.k8s.io
         version: v1.28.0
       name: cluster_info
-    server: https://192.168.58.2:8443
-  name: ejercicios
-- cluster:
-    certificate-authority: ca.crt
-    extensions:
-    - extension:
-        last-update: Tue, 15 Nov 2022 08:30:04 CET
-        provider: minikube.sigs.k8s.io
-        version: v1.28.0
-      name: cluster_info
-    server: https://192.168.67.2:8443
-  name: javaProfile
+    server: https://192.168.85.2:8443
+  name: teralco
 contexts:
 - context:
-    cluster: ejercicios
+    cluster: teralco
     extensions:
     - extension:
-        last-update: Thu, 10 Nov 2022 09:43:20 CET
+        last-update: Fri, 18 Nov 2022 08:16:08 CET
         provider: minikube.sigs.k8s.io
         version: v1.28.0
       name: context_info
     namespace: default
-    user: ejercicios
-  name: ejercicios
-- context:
-    cluster: javaProfile
-    extensions:
-    - extension:
-        last-update: Tue, 15 Nov 2022 08:30:04 CET
-        provider: minikube.sigs.k8s.io
-        version: v1.28.0
-      name: context_info
-    namespace: default
-    user: javaProfile
-  name: javaProfile
-current-context: javaProfile
+    user: teralco
+  name: teralco
+current-context: teralco
 kind: Config
 preferences: {}
 users:
-- name: ejercicios
+- name: teralco
   user:
-    client-certificate: /home/lifecycle/.minikube/profiles/ejercicios/client.crt
-    client-key: /home/lifecycle/.minikube/profiles/ejercicios/client.key
-- name: javaProfile
-  user:
-    client-certificate: minikube/client.crt
-    client-key: minikube/client.key
+    client-certificate: /home/teralco/.minikube/profiles/teralco/client.crt
+    client-key: /home/teralco/.minikube/profiles/teralco/client.key
