@@ -1,7 +1,7 @@
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: /home/teralco/.minikube/ca.crt
+    certificate-authority: ca.crt
     extensions:
     - extension:
         last-update: Fri, 18 Nov 2022 08:16:08 CET
@@ -28,5 +28,5 @@ preferences: {}
 users:
 - name: teralco
   user:
-    client-certificate: /home/teralco/.minikube/profiles/teralco/client.crt
-    client-key: /home/teralco/.minikube/profiles/teralco/client.key
+    client-certificate: minikube/client.crt
+    client-key: minikube/client.key
