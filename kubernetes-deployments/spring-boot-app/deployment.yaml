@@ -9,7 +9,7 @@ spec:
   template:
      metadata:
        name: spring-boot-app-pod
-       labels: 
+       labels:
          app: spring-boot
          type: back-end
      spec:
@@ -30,7 +30,7 @@ metadata:
 spec:
   selector:
     app: spring-boot
-  type: NodePort  
+  type: NodePort
   ports:
     - protocol: TCP
       targetPort: 8080
