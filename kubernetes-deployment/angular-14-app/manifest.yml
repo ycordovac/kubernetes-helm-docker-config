@@ -15,7 +15,7 @@ spec:
      spec:
          containers:
            - name: angular-14-app
-             image: "franaznarteralco/frontend-demo:latest"
+             image: "yandihlg/frontend-demo:latest"
              imagePullPolicy: Always
   replicas: 1
   selector:
