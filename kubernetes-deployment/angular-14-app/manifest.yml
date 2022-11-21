@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app
+  name: angular-14-app
   labels:
-    app: spring-boot-app
-    type: back-end
+    app: angular-14-app
+    type: front-end
 spec:
   template:
     metadata:
-      name: spring-boot-app
+      name: angular-14-app
       labels:
-        app: spring-boot
-        type: back-end
+        app: angular-14
+        type: front-end
     spec:
       containers:
-        - name: spring-boot-app
+        - name: angular-14-app
           image: "yandihlg/angular-14-app:latest"
           imagePullPolicy: Always
   replicas: 1
   selector:
     matchLabels:
-      app: spring-boot
-      type: back-end
+      app: angular-14
+      type: front-end
 #---
 #apiVersion: v1
 #kind: Service
