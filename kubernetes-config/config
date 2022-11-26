@@ -26,7 +26,11 @@ current-context: minikube
 kind: Config
 preferences: {}
 users:
-- name: minikube
+- name: example
+  user:
+    client-certificate: minikube/client.crt
+    client-key: minikube/client.key
+- name: lifecycle
   user:
     client-certificate: minikube/client.crt
     client-key: minikube/client.key
