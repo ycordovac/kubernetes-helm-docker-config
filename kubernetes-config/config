@@ -1,56 +1,31 @@
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority: /home/bootuser/.minikube/ca.crt
-    extensions:
-    - extension:
-        last-update: Mon, 28 Nov 2022 08:04:46 CET
-        provider: minikube.sigs.k8s.io
-        version: v1.28.0
-      name: cluster_info
-    server: https://192.168.49.2:8443
-  name: lifecycle
-- cluster:
     certificate-authority: ca.crt
     extensions:
     - extension:
-        last-update: Thu, 24 Nov 2022 08:28:54 CET
+        last-update: Tue, 18 Oct 2022 15:11:05 CEST
         provider: minikube.sigs.k8s.io
-        version: v1.28.0
+        version: v1.27.1
       name: cluster_info
-    server: https://192.168.58.2:8443
+    server: https://192.168.49.2:8443
   name: minikube
 contexts:
-- context:
-    cluster: lifecycle
-    extensions:
-    - extension:
-        last-update: Mon, 28 Nov 2022 08:04:46 CET
-        provider: minikube.sigs.k8s.io
-        version: v1.28.0
-      name: context_info
-    namespace: default
-    user: lifecycle
-  name: lifecycle
 - context:
     cluster: minikube
     extensions:
     - extension:
-        last-update: Thu, 24 Nov 2022 08:28:54 CET
+        last-update: Tue, 18 Oct 2022 15:11:05 CEST
         provider: minikube.sigs.k8s.io
-        version: v1.28.0
+        version: v1.27.1
       name: context_info
     namespace: default
     user: minikube
   name: minikube
-current-context: lifecycle
+current-context: minikube
 kind: Config
 preferences: {}
 users:
-- name: lifecycle
-  user:
-    client-certificate: minikube/client.crt
-    client-key: minikube/client.key
 - name: minikube
   user:
     client-certificate: minikube/client.crt
